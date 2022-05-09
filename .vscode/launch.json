@@ -8,13 +8,15 @@
       "name": "Launch Album UI via NPM",
       "type": "node",
       "request": "launch",
-      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build",
+      "cwd": "${workspaceFolder}/src",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run-script", "start"],
+      "runtimeArgs": ["run", "start"],
+      "skipFiles": ["<node_internals>/**"],
       "env": {
         "NODE_ENV": "development",
         "BACKGROUND_COLOR": "black",
-        "API_BASE_URL": "http://localhost"
+        "API_BASE_URL": "http://localhost:3000"
       }
     }
   ]
