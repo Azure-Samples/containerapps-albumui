@@ -15,8 +15,8 @@
       "skipFiles": ["<node_internals>/**"],
       "env": {
         "NODE_ENV": "development",
-        "BACKGROUND_COLOR": "black",
-        "API_BASE_URL": "http://localhost:3000"
+        "BACKGROUND_COLOR": "red",
+        "API_BASE_URL": "http://localhost"
       }
     }
   ]
