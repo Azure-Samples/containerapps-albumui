@@ -1,8 +1,19 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 require("dotenv").config();
 const axios = require("axios");
 const background = process.env.BACKGROUND_COLOR;
+
+function getBaseUrl() {
+  let url = process.env.API_BASE_URL;
+
+  if(!/^https:\/\//.test(url)) {
+    url = url.replace('http://', ''); // remove unsecured protocol, if exists
+    url = `https://${url}`;
+  }
+  
+  return url;
+}
 
 const api = axios.create({
   baseURL: process.env.API_BASE_URL,
