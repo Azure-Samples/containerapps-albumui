@@ -16,7 +16,7 @@ function getBaseUrl() {
 }
 
 const api = axios.create({
-  baseURL: process.env.API_BASE_URL,
+  baseURL: getBaseUrl(),
   params: {},
   timeout: process.env.TIMEOUT || 5000,
 });
