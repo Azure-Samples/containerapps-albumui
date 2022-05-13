@@ -7,7 +7,7 @@ const background = process.env.BACKGROUND_COLOR;
 const api = axios.create({
   baseURL: process.env.API_BASE_URL,
   params: {},
-  timeout: process.env.TIMEOUT || 5000,
+  timeout: process.env.TIMEOUT || 15000,
 });
 
 /* GET home page. */
